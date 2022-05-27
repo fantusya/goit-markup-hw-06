@@ -748,7 +748,9 @@ img {
 
     padding: 40px;
 
-    background-color: rgba(255, 255, 255, 1);
+    background-color: var(--accent-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 
     transform: translate(-50%, -50%) scale(1);
 
@@ -790,7 +792,7 @@ img {
 
 .datas {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 12px;
     text-align: center;
 
     font-weight: 700;
@@ -808,24 +810,12 @@ img {
 
 .form-field {
     position: relative;
-
-    margin-bottom: 28px;
-}
-
-.form-field:last-child {
-    margin-bottom: 20px;
-}
-
-.comment {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .form-label {
-    position: absolute;
     display: block;
-    left: 0;
-    bottom: 100%;
-    transform: translateY(-4px);
+    margin-bottom: 4px;
 
     font-size: 12px;
     line-height: 1.17;
@@ -846,7 +836,7 @@ img {
 
 .modal-icon {
     position: absolute;
-    top: 11px;
+    bottom: 11px;
     left: 12px;
 
     fill: var(--secondary-text-color);
@@ -858,7 +848,7 @@ img {
     border-color: var(--hover-color);
 }
 
-.form-input:focus~.modal-icon {
+.form-input:focus ~ .modal-icon {
     fill: var(--hover-color);
 }
 
@@ -876,6 +866,7 @@ img {
 }
 
 .comment-area::placeholder {
+    font-size: 12px;
     line-height: 1.14;
     letter-spacing: 0.01em;
 
@@ -886,9 +877,14 @@ img {
     border-color: var(--hover-color);
 }
 
+.comment {
+    margin-bottom: 20px;
+}
+
 .checkbox-field {
     display: flex;
     align-items: center;
+    justify-content: center;
 
     margin-bottom: 30px;
 }
@@ -921,6 +917,10 @@ img {
     background-color: var(--hover-color);
     background-size: contain;
     background-origin: border-box;
+    border-color: var(--hover-color);
+}
+
+.checkbox:focus + .checkbox-icon {
     border-color: var(--hover-color);
 }
 
